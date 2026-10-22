@@ -1,82 +1,82 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>加入我们 | 中国学生会 CSA</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Join Us | Chinese Student Association</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav>
-<a class="logo" href="index.html"><span class="seal">会</span>中国学生会 CSA</a>
-<ul>
-<li><a class="link " href="index.html" data-i18n="n_home">首页</a></li>
-<li><a class="link " href="about.html" data-i18n="n_about">关于我们</a></li>
-<li><a class="link " href="activities.html" data-i18n="n_act">活动</a></li>
-<li><a class="link " href="guide.html" data-i18n="n_guide">新生指南</a></li>
-<li><a class="link active" href="join.html" data-i18n="n_join">加入我们</a></li>
-<li><select id="langSel" aria-label="Language"><option value="zh">中文</option><option value="en">English</option><option value="id">Bahasa Indonesia</option></select></li>
-</ul>
-</nav>
-<main>
-<h1 data-i18n="j_h1">加入中国学生会</h1>
-<p data-i18n="j_intro">填写表单报名,负责同学会尽快联系你。</p>
-<form id="f" action="#" method="post" novalidate>
-<label class="t" for="name" data-i18n="lb_name">姓名</label>
-<input type="text" id="name" name="name" required minlength="2" placeholder="例如:王海洋" data-i18n-ph="ph_name">
-<div class="err" id="e1"></div>
-<label class="t" for="pw" data-i18n="lb_pw">设置密码(至少 8 位,含字母和数字)</label>
-<input type="password" id="pw" name="pw" required minlength="8" pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,}">
-<div class="err" id="e2"></div>
-<label class="t" for="msg" data-i18n="lb_msg">你想加入的原因</label>
-<textarea id="msg" name="msg" rows="4" required minlength="10"></textarea>
-<div class="err" id="e3"></div>
-<label class="t" data-i18n="lb_grade">年级</label>
-<span class="opt"><input type="radio" name="grade" value="1" required> <span data-i18n="y1">大一</span></span>
-<span class="opt"><input type="radio" name="grade" value="2"> <span data-i18n="y2">大二</span></span>
-<span class="opt"><input type="radio" name="grade" value="3"> <span data-i18n="y3">大三</span></span>
-<span class="opt"><input type="radio" name="grade" value="4"> <span data-i18n="y4">大四</span></span>
-<div class="err" id="e4"></div>
-<label class="t" data-i18n="lb_need">感兴趣的活动(可多选)</label>
-<span class="opt"><input type="checkbox" name="need" value="welcome"> <span data-i18n="k1">迎新联谊</span></span>
-<span class="opt"><input type="checkbox" name="need" value="culture"> <span data-i18n="k2">文化节</span></span>
-<span class="opt"><input type="checkbox" name="need" value="lang"> <span data-i18n="k3">语言互助</span></span>
-<span class="opt"><input type="checkbox" name="need" value="sports"> <span data-i18n="k4">运动</span></span>
-<div class="err" id="e5"></div>
-<label class="t" for="dept" data-i18n="lb_dept">意向部门</label>
-<select id="dept" name="dept" required>
-<option value="" data-i18n="o_sel">请选择</option>
-<option value="pub" data-i18n="dp1">宣传部</option>
-<option value="evt" data-i18n="dp2">活动部</option>
-<option value="out" data-i18n="dp3">外联部</option>
-<option value="sup" data-i18n="dp4">生活服务部</option>
-</select>
-<div class="err" id="e6"></div>
-<button type="submit" data-i18n="btn">提交报名</button>
-<div id="result"></div>
-</form>
-<script>
-document.getElementById("f").addEventListener("submit",function(e){
-e.preventDefault();
-var ok=true;
-function chk(id,cond,key){document.getElementById(id).textContent=cond?"":T(key);if(!cond)ok=false;}
-chk("e1",this.name.value.trim().length>=2,"v1");
-chk("e2",/^(?=.*[A-Za-z])(?=.*[0-9]).{8,}$/.test(this.pw.value),"v2");
-chk("e3",this.msg.value.trim().length>=10,"v3");
-chk("e4",!!this.querySelector("input[name=grade]:checked"),"v4");
-chk("e5",this.querySelectorAll("input[name=need]:checked").length>0,"v5");
-chk("e6",this.dept.value!=="","v6");
-document.getElementById("result").textContent=ok?T("v_ok")+this.name.value.trim()+T("v_end"):"";
-});
-</script>
-</main>
-<footer>
-<p data-i18n="f_tag">中国学生会 CSA · 同心同行,共创精彩</p>
-<p><a href="index.html" data-i18n="n_home">首页</a> | <a href="about.html" data-i18n="n_about">关于我们</a> | <a href="activities.html" data-i18n="n_act">活动</a> | <a href="guide.html" data-i18n="n_guide">新生指南</a> | <a href="join.html" data-i18n="n_join">加入我们</a></p>
-<p data-i18n="f_note">活动安排以社团群通知为准。</p>
-</footer>
-<script src="lang.js"></script>
+    <header class="site-header">
+        <nav>
+            <a class="logo" href="index.html"><span class="seal">C</span>Chinese Student Association</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="activities.html">Events</a></li>
+                <li><a href="guide.html">New Student Guide</a></li>
+                <li><a href="join.html" class="active">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Join the Chinese Student Association</h1>
+        <p>Fill in the form to apply; a member will contact you soon.</p>
+
+        <form id="join-form" action="#" method="post" novalidate>
+            <label class="field-label" for="name">Name</label>
+            <input type="text" id="name" name="name" required minlength="2" placeholder="e.g. Wang Haiyang">
+            <div class="error" id="name-error"></div>
+
+            <label class="field-label" for="pw">Set a password (at least 8 characters, letters and numbers)</label>
+            <input type="password" id="pw" name="pw" required minlength="8" pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,}">
+            <div class="error" id="pw-error"></div>
+
+            <label class="field-label" for="msg">Why do you want to join?</label>
+            <textarea id="msg" name="msg" rows="4" required minlength="10"></textarea>
+            <div class="error" id="msg-error"></div>
+
+            <fieldset>
+                <legend class="field-label">Year</legend>
+                <label class="option"><input type="radio" name="grade" value="1" required> Year 1</label>
+                <label class="option"><input type="radio" name="grade" value="2"> Year 2</label>
+                <label class="option"><input type="radio" name="grade" value="3"> Year 3</label>
+                <label class="option"><input type="radio" name="grade" value="4"> Year 4</label>
+            </fieldset>
+            <div class="error" id="grade-error"></div>
+
+            <fieldset>
+                <legend class="field-label">Events you are interested in (choose any)</legend>
+                <label class="option"><input type="checkbox" name="need" value="welcome"> Welcome &amp; socials</label>
+                <label class="option"><input type="checkbox" name="need" value="culture"> Culture festival</label>
+                <label class="option"><input type="checkbox" name="need" value="lang"> Language help</label>
+                <label class="option"><input type="checkbox" name="need" value="sports"> Sports</label>
+            </fieldset>
+            <div class="error" id="need-error"></div>
+
+            <label class="field-label" for="dept">Preferred department</label>
+            <select id="dept" name="dept" required>
+                <option value="">Please select</option>
+                <option value="pub">Publicity</option>
+                <option value="evt">Events</option>
+                <option value="out">Outreach</option>
+                <option value="sup">Student Support</option>
+            </select>
+            <div class="error" id="dept-error"></div>
+
+            <button type="submit">Submit application</button>
+            <div id="result"></div>
+        </form>
+    </main>
+
+    <footer>
+        <p>Chinese Student Association · United in heart, moving forward together</p>
+        <p><a href="index.html">Home</a> | <a href="about.html">About Us</a> | <a href="activities.html">Events</a> | <a href="guide.html">New Student Guide</a> | <a href="join.html">Join Us</a></p>
+        <p>Event plans are subject to notices in the club group chat.</p>
+    </footer>
+    <script src="js/join.js"></script>
 </body>
 </html>

@@ -1,47 +1,91 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>首页 | 中国学生会 CSA</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | Chinese Student Association</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav>
-<a class="logo" href="index.html"><span class="seal">会</span>中国学生会 CSA</a>
-<ul>
-<li><a class="link active" href="index.html" data-i18n="n_home">首页</a></li>
-<li><a class="link " href="about.html" data-i18n="n_about">关于我们</a></li>
-<li><a class="link " href="activities.html" data-i18n="n_act">活动</a></li>
-<li><a class="link " href="guide.html" data-i18n="n_guide">新生指南</a></li>
-<li><a class="link " href="join.html" data-i18n="n_join">加入我们</a></li>
-<li><select id="langSel" aria-label="Language"><option value="zh">中文</option><option value="en">English</option><option value="id">Bahasa Indonesia</option></select></li>
-</ul>
-</nav>
-<main>【p
-<div class="hero" style="background-color:#A8202A;background-image:linear-gradient(135deg,#A8202A,#6e1219);background-size:cover;background-repeat:no-repeat;background-position:center;position:relative;overflow:hidden;display:block;z-index:1;top:0;width:100%;max-width:1000px;min-height:280px;padding:60px 30px;margin:0 auto">
-<span class="big-seal">会</span>
-<h1 data-i18n="h_title" style="font-family:'Noto Serif SC',Georgia,serif;font-size:42px;font-weight:700;color:#FFFFFF;text-align:left">同心同行,共创精彩</h1>
-<p data-i18n="h_sub">中国学生会 · 为在印尼求学的中国同学搭建的大家庭</p>
-<p data-i18n="h_desc">迎新、联谊、文化节、互助答疑,每个人都可以参与。</p>
-</div>
-<h2 data-i18n="h_start">快速了解我们</h2>
-<div class="grid">
-<div class="card"><h3 data-i18n="c1t">关于我们</h3><p data-i18n="c1p">了解社团的宗旨、部门和分工。</p><a href="about.html" data-i18n="a_more">了解更多</a></div>
-<div class="card"><h3 data-i18n="c2t">近期活动</h3><p data-i18n="c2p">查看活动日程和筹办流程。</p><a href="activities.html" data-i18n="a_see">查看活动</a></div>
-<div class="card"><h3 data-i18n="c3t">新生指南</h3><p data-i18n="c3p">到校第一周要做什么、联系谁。</p><a href="guide.html" data-i18n="a_more">了解更多</a></div>
-<div class="card"><h3 data-i18n="c4t">加入我们</h3><p data-i18n="c4p">填写报名表,选择你感兴趣的部门。</p><a href="join.html" data-i18n="a_apply">马上报名</a></div>
-</div>
-<h2 data-i18n="h_why">我们为什么存在</h2>
-<div class="box"><p data-i18n="why_p">离开家乡来到印尼,难免遇到语言、生活和学习上的各种不适应。中国学生会由同学自己组织,通过活动和互助让大家更快适应,也让身在异国他乡的我们有一个随时可以找到的"家"。</p></div>
-</main>
-<footer>
-<p data-i18n="f_tag">中国学生会 CSA · 同心同行,共创精彩</p>
-<p><a href="index.html" data-i18n="n_home">首页</a> | <a href="about.html" data-i18n="n_about">关于我们</a> | <a href="activities.html" data-i18n="n_act">活动</a> | <a href="guide.html" data-i18n="n_guide">新生指南</a> | <a href="join.html" data-i18n="n_join">加入我们</a></p>
-<p data-i18n="f_note">活动安排以社团群通知为准。</p>
-</footer>
-<script src="lang.js"></script>
+    <header class="site-header">
+        <nav>
+            <a class="logo" href="index.html"><span class="seal">C</span>Chinese Student Association</a>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="activities.html">Events</a></li>
+                <li><a href="guide.html">New Student Guide</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="
+            background-color: #A8202A;
+            background-image: linear-gradient(135deg, #A8202A, #6e1219);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            display: block;
+            z-index: 1;
+            top: 0;
+            width: 100%;
+            max-width: 1000px;
+            min-height: 280px;
+            min-width: 280px;
+            height: auto;
+            padding: 60px 30px;
+            margin: 0 auto;">
+            <span class="big-seal">CSA</span>
+            <h1 style="
+                font-family: 'Noto Serif', Georgia, serif;
+                font-size: 42px;
+                font-weight: 700;
+                color: #FFFFFF;
+                text-align: left;">United in heart, moving forward together</h1>
+            <p>Chinese Student Association · A home for Chinese students studying in Indonesia</p>
+            <p>Welcome events, socials, culture festivals and peer help: everyone can take part.</p>
+        </section>
+
+        <h2>Get to know us</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>About Us</h3>
+                <p>Learn our mission, departments and roles.</p>
+                <a href="about.html">Learn more</a>
+            </div>
+            <div class="card">
+                <h3>Upcoming events</h3>
+                <p>See the event calendar and how events are organized.</p>
+                <a href="activities.html">View events</a>
+            </div>
+            <div class="card">
+                <h3>New Student Guide</h3>
+                <p>What to do in your first week and who to contact.</p>
+                <a href="guide.html">Learn more</a>
+            </div>
+            <div class="card">
+                <h3>Join Us</h3>
+                <p>Fill in the form and pick the department you like.</p>
+                <a href="join.html">Apply now</a>
+            </div>
+        </div>
+
+        <h2>Why we exist</h2>
+        <div class="box">
+            <p>Leaving home for Indonesia means adjusting to a new language, daily life and studies. The Chinese Student Association is run by students for students: through events and mutual help we settle in faster and have a home to turn to when we are far from home.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Chinese Student Association · United in heart, moving forward together</p>
+        <p><a href="index.html">Home</a> | <a href="about.html">About Us</a> | <a href="activities.html">Events</a> | <a href="guide.html">New Student Guide</a> | <a href="join.html">Join Us</a></p>
+        <p>Event plans are subject to notices in the club group chat.</p>
+    </footer>
 </body>
 </html>

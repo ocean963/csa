@@ -1,63 +1,147 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>活动 | 中国学生会 CSA</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>
-.tbl-wrap{background-color:#fff;background-image:linear-gradient(#fff,#fbf3e4);background-size:100% 100%;background-repeat:no-repeat;background-position:top;
-position:relative;overflow-x:auto;display:block;z-index:1;
-width:100%;max-width:1000px;padding:10px;margin:20px auto;border-radius:4px}
-table{width:100%;border-collapse:collapse;font-family:"Noto Sans SC",sans-serif;font-size:15px;text-align:left}
-th{background-color:#A8202A;color:#fff;font-weight:700;padding:12px}
-td{padding:10px 12px;border-bottom:1px solid #eee}
-tr:nth-child(even){background-color:#FBF3E4}
-td.hl{color:#A8202A;font-weight:700}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Events | Chinese Student Association</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .table-wrap {
+            background-color: #fff;
+            background-image: linear-gradient(#fff, #fbf3e4);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: top;
+            position: relative;
+            overflow-x: auto;
+            display: block;
+            z-index: 1;
+            width: 100%;
+            max-width: 1000px;
+            min-width: 300px;
+            min-height: 60px;
+            height: auto;
+            padding: 10px;
+            margin: 20px auto;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: "Noto Sans", Arial, sans-serif;
+            font-size: 15px;
+            text-align: left;
+        }
+
+        caption {
+            caption-side: top;
+            text-align: left;
+            font-weight: 700;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #A8202A;
+            color: #fff;
+            font-weight: 700;
+            padding: 12px;
+        }
+
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:nth-child(even) {
+            background-color: #FBF3E4;
+        }
+
+        td.highlight {
+            color: #A8202A;
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body>
-<nav>
-<a class="logo" href="index.html"><span class="seal">会</span>中国学生会 CSA</a>
-<ul>
-<li><a class="link " href="index.html" data-i18n="n_home">首页</a></li>
-<li><a class="link " href="about.html" data-i18n="n_about">关于我们</a></li>
-<li><a class="link active" href="activities.html" data-i18n="n_act">活动</a></li>
-<li><a class="link " href="guide.html" data-i18n="n_guide">新生指南</a></li>
-<li><a class="link " href="join.html" data-i18n="n_join">加入我们</a></li>
-<li><select id="langSel" aria-label="Language"><option value="zh">中文</option><option value="en">English</option><option value="id">Bahasa Indonesia</option></select></li>
-</ul>
-</nav>
-<main>
-<h1 data-i18n="n_act">活动</h1>
-<div class="tbl-wrap">
-<table>
-<caption data-i18n="t_cap" style="caption-side:top;text-align:left;font-weight:700;padding:8px">活动日程</caption>
-<tr><th data-i18n="th_when">时间</th><th data-i18n="th_what">活动</th><th data-i18n="th_where">地点</th><th data-i18n="th_who">对象</th></tr>
-<tr><td class="hl" data-i18n="t1a">开学第一周</td><td data-i18n="t1b">迎新见面会</td><td data-i18n="t1c">学校礼堂</td><td data-i18n="t1d">全体新生</td></tr>
-<tr><td class="hl" data-i18n="t2a">每月第一个周六</td><td data-i18n="t2b">同乡交流茶话会</td><td data-i18n="t2c">社团活动室</td><td data-i18n="t2d">全体成员</td></tr>
-<tr><td class="hl" data-i18n="t3a">每周三</td><td data-i18n="t3b">印尼语互助角</td><td data-i18n="t3c">图书馆</td><td data-i18n="t3d">有需要的同学</td></tr>
-<tr><td class="hl" data-i18n="t4a">11月</td><td data-i18n="t4b">中国传统文化节</td><td data-i18n="t4c">学校广场</td><td data-i18n="t4d">全校师生</td></tr>
-<tr><td class="hl" data-i18n="t5a">12月</td><td data-i18n="t5b">年终联谊晚会</td><td data-i18n="t5c">学生活动中心</td><td data-i18n="t5d">全体成员</td></tr>
-</table>
-</div>
-<div class="tip" data-i18n="act_tip">日程可能调整,请关注社团群通知。</div>
-<h2 data-i18n="act_h2">活动筹办流程</h2>
-<div class="box"><ol>
-<li data-i18n="s1">提出活动想法,在例会上讨论</li>
-<li data-i18n="s2">活动部写出方案,列出预算和分工</li>
-<li data-i18n="s3">向学校申请场地和批准</li>
-<li data-i18n="s4">宣传部发布海报,开放报名</li>
-<li data-i18n="s5">活动当天分工执行,结束后总结</li>
-</ol></div>
-</main>
-<footer>
-<p data-i18n="f_tag">中国学生会 CSA · 同心同行,共创精彩</p>
-<p><a href="index.html" data-i18n="n_home">首页</a> | <a href="about.html" data-i18n="n_about">关于我们</a> | <a href="activities.html" data-i18n="n_act">活动</a> | <a href="guide.html" data-i18n="n_guide">新生指南</a> | <a href="join.html" data-i18n="n_join">加入我们</a></p>
-<p data-i18n="f_note">活动安排以社团群通知为准。</p>
-</footer>
-<script src="lang.js"></script>
+    <header class="site-header">
+        <nav>
+            <a class="logo" href="index.html"><span class="seal">C</span>Chinese Student Association</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="activities.html" class="active">Events</a></li>
+                <li><a href="guide.html">New Student Guide</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Events</h1>
+
+        <div class="table-wrap">
+            <table>
+                <caption>Event calendar</caption>
+                <tr>
+                    <th>When</th>
+                    <th>Event</th>
+                    <th>Where</th>
+                    <th>For</th>
+                </tr>
+                <tr>
+                    <td class="highlight">First week of term</td>
+                    <td>Welcome meet-up</td>
+                    <td>School hall</td>
+                    <td>All new students</td>
+                </tr>
+                <tr>
+                    <td class="highlight">First Saturday of each month</td>
+                    <td>Tea social</td>
+                    <td>Club room</td>
+                    <td>All members</td>
+                </tr>
+                <tr>
+                    <td class="highlight">Every Wednesday</td>
+                    <td>Indonesian language help corner</td>
+                    <td>Library</td>
+                    <td>Anyone who needs it</td>
+                </tr>
+                <tr>
+                    <td class="highlight">November</td>
+                    <td>Chinese traditional culture festival</td>
+                    <td>School plaza</td>
+                    <td>All students and staff</td>
+                </tr>
+                <tr>
+                    <td class="highlight">December</td>
+                    <td>Year-end party</td>
+                    <td>Student center</td>
+                    <td>All members</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="tip">The schedule may change; follow notices in the club group chat.</div>
+
+        <h2>How we organize an event</h2>
+        <div class="box">
+            <ol>
+                <li>Propose an idea and discuss it at the regular meeting</li>
+                <li>The events team writes a plan with budget and roles</li>
+                <li>Request the venue and approval from the school</li>
+                <li>Publicity posts the poster and opens registration</li>
+                <li>Run the event on the day, then hold a review</li>
+            </ol>
+        </div>
+    </main>
+
+    <footer>
+        <p>Chinese Student Association · United in heart, moving forward together</p>
+        <p><a href="index.html">Home</a> | <a href="about.html">About Us</a> | <a href="activities.html">Events</a> | <a href="guide.html">New Student Guide</a> | <a href="join.html">Join Us</a></p>
+        <p>Event plans are subject to notices in the club group chat.</p>
+    </footer>
 </body>
 </html>
