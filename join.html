@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Join Us | Chinese Student Association</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav>
+            <a class="logo" href="index.html"><span class="seal">C</span>Chinese Student Association</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="activities.html">Events</a></li>
+                <li><a href="guide.html">New Student Guide</a></li>
+                <li><a href="join.html" class="active">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Join the Chinese Student Association</h1>
+        <p>Fill in the form to apply; a member will contact you soon.</p>
+
+        <form id="join-form" action="#" method="post" novalidate>
+            <label class="field-label" for="name">Name</label>
+            <input type="text" id="name" name="name" required minlength="2" placeholder="e.g. Wang Haiyang">
+            <div class="error" id="name-error"></div>
+
+            <label class="field-label" for="pw">Set a password (at least 8 characters, letters and numbers)</label>
+            <input type="password" id="pw" name="pw" required minlength="8" pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,}">
+            <div class="error" id="pw-error"></div>
+
+            <label class="field-label" for="msg">Why do you want to join?</label>
+            <textarea id="msg" name="msg" rows="4" required minlength="10"></textarea>
+            <div class="error" id="msg-error"></div>
+
+            <fieldset>
+                <legend class="field-label">Year</legend>
+                <label class="option"><input type="radio" name="grade" value="1" required> Year 1</label>
+                <label class="option"><input type="radio" name="grade" value="2"> Year 2</label>
+                <label class="option"><input type="radio" name="grade" value="3"> Year 3</label>
+                <label class="option"><input type="radio" name="grade" value="4"> Year 4</label>
+            </fieldset>
+            <div class="error" id="grade-error"></div>
+
+            <fieldset>
+                <legend class="field-label">Events you are interested in (choose any)</legend>
+                <label class="option"><input type="checkbox" name="need" value="welcome"> Welcome &amp; socials</label>
+                <label class="option"><input type="checkbox" name="need" value="culture"> Culture festival</label>
+                <label class="option"><input type="checkbox" name="need" value="lang"> Language help</label>
+                <label class="option"><input type="checkbox" name="need" value="sports"> Sports</label>
+            </fieldset>
+            <div class="error" id="need-error"></div>
+
+            <label class="field-label" for="dept">Preferred department</label>
+            <select id="dept" name="dept" required>
+                <option value="">Please select</option>
+                <option value="pub">Publicity</option>
+                <option value="evt">Events</option>
+                <option value="out">Outreach</option>
+                <option value="sup">Student Support</option>
+            </select>
+            <div class="error" id="dept-error"></div>
+
+            <button type="submit">Submit application</button>
+            <div id="result"></div>
+        </form>
+    </main>
+
+    <footer>
+        <p>Chinese Student Association · United in heart, moving forward together</p>
+        <p><a href="index.html">Home</a> | <a href="about.html">About Us</a> | <a href="activities.html">Events</a> | <a href="guide.html">New Student Guide</a> | <a href="join.html">Join Us</a></p>
+        <p>Event plans are subject to notices in the club group chat.</p>
+    </footer>
+    <script src="js/join.js"></script>
+</body>
+</html>
